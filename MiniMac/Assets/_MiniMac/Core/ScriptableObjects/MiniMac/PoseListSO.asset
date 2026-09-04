@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23eb48f4dc389e6c49d6ccf8df7b55ee, type: 3}
+  m_Name: PoseListSO
+  m_EditorClassIdentifier: Assembly-CSharp::PoseListSO
+  poses:
+  - poseName: Neutral
+    poseSprite: {fileID: 21300000, guid: 5f5d953dfd68d6f47955a9bec96aed09, type: 3}
+  - poseName: Happy
+    poseSprite: {fileID: 21300000, guid: 4965516a0a1e5a3bca9ec13496994ffd, type: 3}
+  - poseName: Angry
+    poseSprite: {fileID: 21300000, guid: 08c2241b0f682918faf22316aec53960, type: 3}
+  - poseName: Sad
+    poseSprite: {fileID: 21300000, guid: f0f353d880b0d4eabb3c447994d7bc2f, type: 3}
