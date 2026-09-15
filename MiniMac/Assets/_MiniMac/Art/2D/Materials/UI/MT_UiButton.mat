@@ -41,7 +41,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _BubbleDensity: 5
+    - _BubbleSize: 0.3
+    - _BubbleUp: 1
+    - _Bubble_Brightness: 0.7
     - _ColorMask: 15
+    - _FloatingSpeed: 1
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
@@ -49,7 +54,10 @@ Material:
     - _StencilWriteMask: 255
     - _UIMaskSoftnessX: 1
     - _UIMaskSoftnessY: 1
+    - _WobbleSpeed: 3
     m_Colors:
+    - _AspectRatio: {r: 1, g: 1, b: 0, a: 0}
     - _ClipRect: {r: 0, g: 0, b: 0, a: 0}
+    - _Tiling: {r: 5, g: 5, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
