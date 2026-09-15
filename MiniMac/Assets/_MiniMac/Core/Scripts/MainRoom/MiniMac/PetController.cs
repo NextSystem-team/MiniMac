@@ -72,11 +72,13 @@ public class PetController : MonoBehaviour
             if (!GameManager.Instance.hasPattedPet)
             {
                 GameManager.Instance.hasPattedPet = true;
-                GameManager.Instance.playerScore += 10; 
+                AudioManager.Instance.PlaySFX(SFXType.Pet_Caress_Success);
+                GameManager.Instance.playerScore += 10;
                 streakCanva.OpenStreakScreen();
-            }else
+            }
+            else
             {
-                GameManager.Instance.playerScore += 1; 
+                GameManager.Instance.playerScore += 1;
             }
 
             StartCoroutine(ResetToIdleAfterDelay(2f));

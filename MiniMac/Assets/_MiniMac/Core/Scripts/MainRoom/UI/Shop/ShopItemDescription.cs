@@ -37,6 +37,7 @@ public class ShopItemDescription : MonoBehaviour
             infoContainerTop.SetActive(false);
 
             transform.parent.GetComponent<ShopCanva>().PopulateShopItems();
+            AudioManager.Instance.PlaySFX(SFXType.UI_Item_Buy);
         }
         else
         {

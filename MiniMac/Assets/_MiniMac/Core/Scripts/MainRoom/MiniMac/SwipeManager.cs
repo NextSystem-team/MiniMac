@@ -12,6 +12,10 @@ public class SwipeManager : MonoBehaviour
     private RaycastHit hit;
     private Ray ray;
 
+    [Header("Caress Sound Settings")]
+    [SerializeField] private float soundCooldown;
+    private float timeToNextSound = 0f;
+
     [Header("References")]
     [SerializeField] private PetController petController;
     private Camera mainCamera;
@@ -47,6 +51,13 @@ public class SwipeManager : MonoBehaviour
                     float distanceMoved = Vector3.Distance(Input.mousePosition, lastTouchPosition);
 
                     currentDistance += distanceMoved;
+
+                    if (Time.time >= timeToNextSound)
+                    {
+                        AudioManager.Instance.PlaySFX(SFXType.Pet_Caress);
+
+                        timeToNextSound = Time.time + soundCooldown;
+                    }
 
                     if (currentDistance >= minDistanceToPat)
                     {
