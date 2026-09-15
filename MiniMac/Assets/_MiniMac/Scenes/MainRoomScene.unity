@@ -4507,7 +4507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwipeManager
   minDistanceToPat: 10000
-  soundCooldown: 0.2
+  soundCooldown: 0.4
   petController: {fileID: 660603543}
 --- !u!1 &713572231
 GameObject:
