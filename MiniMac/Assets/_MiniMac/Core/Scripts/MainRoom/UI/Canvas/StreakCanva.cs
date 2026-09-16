@@ -11,7 +11,7 @@ public class StreakCanva : MonoBehaviour
     void Start()
     {
         group = GetComponent<CanvasGroup>();
-        screenContainer = GetComponent<RectTransform>();
+        screenContainer = streakScreen.GetComponent<RectTransform>();
 
         group.alpha = 0f;
         screenContainer.localScale = new(0.25f, 0.25f, 0.25f);
@@ -32,13 +32,15 @@ public class StreakCanva : MonoBehaviour
             group.alpha = 0f;
             screenContainer.localScale = new(0.25f, 0.25f, 0.25f);
 
-            group.DOFade(1f, 1f);
-            screenContainer.DOScale(Vector3.one, 1.1f).SetEase(Ease.OutBack, 0.8f);
+            group.DOFade(1f, 0.7f);
+            screenContainer.DOScale(Vector3.one, 0.6f).SetEase(Ease.OutBack, 0.8f);
         }
-    }
+    }   
 
     public void CloseStreakScreen()
     {
-        streakScreen.SetActive(false);
+        group.DOFade(0f, 0.5f);
+        screenContainer.DOScale(new Vector3(0.25f, 0.25f, 0.25f), 0.4f).SetEase(Ease.InBack, 0.8f)
+            .OnComplete(()=>{ streakScreen.SetActive(false); });
     }
 }

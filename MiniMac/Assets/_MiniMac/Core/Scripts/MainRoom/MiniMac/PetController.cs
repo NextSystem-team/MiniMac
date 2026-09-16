@@ -72,6 +72,7 @@ public class PetController : MonoBehaviour
             if (!GameManager.Instance.hasPattedPet)
             {
                 GameManager.Instance.hasPattedPet = true;
+                GlobalEvents.ConcludePatMission?.Invoke();
                 AudioManager.Instance.PlaySFX(SFXType.Pet_Caress_Success);
                 GameManager.Instance.playerScore += 10;
                 streakCanva.OpenStreakScreen();

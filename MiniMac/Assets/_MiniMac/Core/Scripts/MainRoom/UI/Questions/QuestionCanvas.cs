@@ -27,6 +27,7 @@ public class QuestionCanvas : MonoBehaviour
         if (!GameManager.Instance.hasAnsweredQuestion)
         {
             GameManager.Instance.hasAnsweredQuestion = true;
+            GlobalEvents.ConcludeQuestionMission?.Invoke();
             GameManager.Instance.playerScore += 50;
             GameManager.Instance.money += 50;
         }
