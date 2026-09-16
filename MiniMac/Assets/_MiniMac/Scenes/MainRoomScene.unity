@@ -211,7 +211,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.05
   acceleratedSpeed: 0.8
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.2
+  easeTime: 0.2
   accelerationEase: 6
 --- !u!1 &63238327
 GameObject:
@@ -232,7 +236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &63238328
 RectTransform:
   m_ObjectHideFlags: 0
@@ -309,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 532ef04e6a53c6640b84f41b00b5a7bc, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -317,7 +321,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 85823d0b0cfba872d8bd7457d6cec2eb, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -349,7 +353,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &110459985
 GameObject:
@@ -766,7 +774,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &211796598
 GameObject:
@@ -1442,7 +1454,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &225931811
 GameObject:
@@ -1786,7 +1802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 532ef04e6a53c6640b84f41b00b5a7bc, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1794,8 +1810,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: dfe5d042d4b0e995495ab84075b5ddfd, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1826,7 +1842,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &322535390
 GameObject:
@@ -2347,7 +2367,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 138, y: 138}
+  m_CellSize: {x: 200, y: 200}
   m_Spacing: {x: 46, y: 100}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -2574,7 +2594,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &401746163
 GameObject:
@@ -3349,7 +3373,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &534801094
 GameObject:
@@ -4417,14 +4445,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.9354847, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: b15e6934254bdf9e6a04b5a847071c1a, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4433,7 +4461,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 10
 --- !u!222 &659486510
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4544,7 +4572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &713572232
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4621,7 +4649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 532ef04e6a53c6640b84f41b00b5a7bc, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -4629,7 +4657,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 85823d0b0cfba872d8bd7457d6cec2eb, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4661,7 +4689,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &724466164
 GameObject:
@@ -5240,7 +5272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &842071698
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5317,7 +5349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 532ef04e6a53c6640b84f41b00b5a7bc, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -5325,7 +5357,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 85823d0b0cfba872d8bd7457d6cec2eb, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5357,7 +5389,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &848046128
 GameObject:
@@ -6072,7 +6108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0007171631, y: -0.0009460449}
+  m_AnchoredPosition: {x: -0.0007171631, y: -0.00079345703}
   m_SizeDelta: {x: 0, y: -670.98254}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &989615456
@@ -6712,7 +6748,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &1133235038
 GameObject:
@@ -6828,7 +6868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1162941682}
   - component: {fileID: 1162941684}
-  - component: {fileID: 1162941683}
+  - component: {fileID: 1162941685}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -6845,8 +6885,8 @@ RectTransform:
   m_GameObject: {fileID: 1162941681}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 292591772}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6855,40 +6895,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1162941683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162941681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.27720672, g: 0.27720672, b: 0.27720672, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 88
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 108
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: X
 --- !u!222 &1162941684
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6897,6 +6903,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162941681}
   m_CullTransparentMesh: 1
+--- !u!114 &1162941685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162941681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e402282c48834b8f0a09742cb3765091, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1176572681
 GameObject:
   m_ObjectHideFlags: 0
@@ -6991,7 +7027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1179022469
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7068,7 +7104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 532ef04e6a53c6640b84f41b00b5a7bc, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -7076,7 +7112,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 85823d0b0cfba872d8bd7457d6cec2eb, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7108,7 +7144,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &1185507504
 GameObject:
@@ -7461,7 +7501,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.05
   acceleratedSpeed: 0.8
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.2
+  easeTime: 0.2
   accelerationEase: 6
 --- !u!1 &1268579284
 GameObject:
@@ -7686,7 +7730,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &1300287690
 GameObject:
@@ -7836,7 +7884,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &1310651266
 GameObject:
@@ -8142,7 +8194,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &1360894616
 GameObject:
@@ -8154,9 +8210,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1360894617}
   - component: {fileID: 1360894619}
-  - component: {fileID: 1360894618}
+  - component: {fileID: 1360894620}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: ImageClose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8171,8 +8227,8 @@ RectTransform:
   m_GameObject: {fileID: 1360894616}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1853217660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8181,40 +8237,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1360894618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360894616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.27720672, g: 0.27720672, b: 0.27720672, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 88
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 108
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: X
 --- !u!222 &1360894619
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8223,6 +8245,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360894616}
   m_CullTransparentMesh: 1
+--- !u!114 &1360894620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360894616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e402282c48834b8f0a09742cb3765091, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1371416775
 GameObject:
   m_ObjectHideFlags: 0
@@ -9204,7 +9256,6 @@ GameObject:
   - component: {fileID: 1723117737}
   - component: {fileID: 1723117739}
   - component: {fileID: 1723117740}
-  - component: {fileID: 1723117741}
   m_Layer: 5
   m_Name: ImageItemDescription
   m_TagString: Untagged
@@ -9245,7 +9296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 2100000, guid: 532ef04e6a53c6640b84f41b00b5a7bc, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 0.3372549, g: 0.21176471, b: 0.13333334, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -9322,22 +9373,6 @@ MonoBehaviour:
     itemRendererSprite: {fileID: 0}
     itemIcon: {fileID: 0}
     itemPrice: 0
---- !u!114 &1723117741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723117735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a499b6836d69718f99837e09895d9ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SodaButtonBehaviour
-  defaultSpeed: 0.05
-  acceleratedSpeed: 2
-  accelerationTime: 0.5
-  accelerationEase: 2
 --- !u!1 &1726742934
 GameObject:
   m_ObjectHideFlags: 0
@@ -9533,8 +9568,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 293.39728}
-  m_SizeDelta: {x: 0, y: 586.7949}
+  m_AnchoredPosition: {x: 0, y: 241.61694}
+  m_SizeDelta: {x: 0, y: 690.3555}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763512389
 MonoBehaviour:
@@ -9549,14 +9584,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.01235475, g: 0, b: 0.4226719, a: 1}
+  m_Color: {r: 0.01910758, g: 0, b: 0.6878725, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a67eb855da690d15180bcd10e92243ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9765,7 +9800,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &1782573907
 GameObject:
@@ -10124,7 +10163,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 40, y: -101}
-  m_SizeDelta: {x: 96, y: 96}
+  m_SizeDelta: {x: 115.2, y: 115.2}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1853217661
 MonoBehaviour:
@@ -10194,7 +10233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 532ef04e6a53c6640b84f41b00b5a7bc, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -10202,8 +10241,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 49856199dc720f61387e1ad51511a2b9, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -10234,7 +10273,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &1879692570
 GameObject:
@@ -10671,7 +10714,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.3
   acceleratedSpeed: 1.6
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.7
+  easeTime: 0.2
   accelerationEase: 2
 --- !u!1 &2020916199
 GameObject:
@@ -10809,7 +10856,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
   defaultSpeed: 0.05
   acceleratedSpeed: 0.8
+  pressedColor:
+    serializedVersion: 2
+    rgba: 4278190335
   accelerationTime: 0.2
+  easeTime: 0.2
   accelerationEase: 6
 --- !u!1 &2031311099
 GameObject:
@@ -10882,7 +10933,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 138, y: 138}
+  m_CellSize: {x: 200, y: 200}
   m_Spacing: {x: 46, y: 100}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -11305,15 +11356,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.9354847, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: b15e6934254bdf9e6a04b5a847071c1a, type: 3}
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -11321,7 +11372,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 20
 --- !u!222 &2097607864
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12647,7 +12698,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 10.26826, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 534801095}
+  - {fileID: 1624143779}
   m_Father: {fileID: 848046129}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &4511048170064015878

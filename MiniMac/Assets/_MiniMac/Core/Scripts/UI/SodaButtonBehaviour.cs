@@ -39,24 +39,29 @@ public class SodaButtonBehaviour : MonoBehaviour, IPointerDownHandler, IPointerU
 
     void Start()
     {
-        buttonImage = GetComponent<Image>();
-        currentMaterial = new(buttonImage.material);
-        buttonImage.material = currentMaterial;
         rect = GetComponent<RectTransform>();
 
+        buttonImage = GetComponent<Image>();
+
+        if (buttonImage != null && buttonImage.material != null)
+        {
+            currentMaterial = new(buttonImage.material);
+            buttonImage.material = currentMaterial;
+            defaultColor = buttonImage.color;
+
+            Vector2 proportion = new(rect.rect.width / rect.rect.height, 1f);
+            currentMaterial.SetVector("_AspectRatio", proportion);
+        }
+
         currentSpeed = defaultSpeed;
-        
+
         defaultScale = rect.localScale;
         pressedScale = defaultScale * 0.9f;
-        
-        defaultColor = buttonImage.color;
-
-        Vector2 proportion = new(rect.rect.width / rect.rect.height, 1f);
-        currentMaterial.SetVector("_AspectRatio", proportion);
     }
 
     void Update()
     {
+        if (currentMaterial == null) return;
         currentOffset += currentSpeed * Time.deltaTime;
         currentMaterial.SetFloat(offsetReference, currentOffset);
     }
@@ -75,6 +80,7 @@ public class SodaButtonBehaviour : MonoBehaviour, IPointerDownHandler, IPointerU
         sizeTween = rect.DOScale(pressedScale, easeTime)
             .SetEase(accelerationEase);
 
+        if (buttonImage == null) return;
         colorTween = buttonImage.DOColor(pressedColor, easeTime)
             .SetEase(accelerationEase);
     }
@@ -89,8 +95,9 @@ public class SodaButtonBehaviour : MonoBehaviour, IPointerDownHandler, IPointerU
             .SetEase(Ease.InOutSine);
 
         sizeTween = rect.DOScale(defaultScale, easeTime)
-            .SetEase(Ease.OutBack); 
+            .SetEase(Ease.OutBack);
 
+        if (buttonImage == null) return;
         colorTween = buttonImage.DOColor(defaultColor, easeTime)
             .SetEase(Ease.InOutSine);
     }
