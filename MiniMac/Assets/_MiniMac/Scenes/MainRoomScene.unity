@@ -4117,8 +4117,8 @@ MonoBehaviour:
   playerScore: 0
   money: 500
   hasPattedPet: 0
-  hasAnsweredQuestion: 0
-  hasPlayedMiniGame: 0
+  hasAnsweredQuestion: 1
+  hasPlayedMiniGame: 1
   hatsObtained: []
   currentHat:
     itemID: 
@@ -4525,7 +4525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbebb036292ac5e31b9cd6efe37978a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwipeManager
-  minDistanceToPat: 10000
+  minDistanceToPat: 30000
   soundCooldown: 0.4
   petController: {fileID: 660603543}
 --- !u!1 &713572231
@@ -7981,7 +7981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1312932356
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7991,8 +7991,8 @@ RectTransform:
   m_GameObject: {fileID: 1312932355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1533060662}
   - {fileID: 724466165}
@@ -11152,6 +11152,7 @@ GameObject:
   - component: {fileID: 2060316886}
   - component: {fileID: 2060316885}
   - component: {fileID: 2060316889}
+  - component: {fileID: 2060316890}
   m_Layer: 5
   m_Name: CanvasStreak
   m_TagString: Untagged
@@ -11256,6 +11257,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StreakCanva
   streakScreen: {fileID: 1312932355}
+--- !u!225 &2060316890
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060316884}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2096987574
 GameObject:
   m_ObjectHideFlags: 0

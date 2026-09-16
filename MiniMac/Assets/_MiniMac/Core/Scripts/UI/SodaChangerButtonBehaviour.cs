@@ -92,6 +92,7 @@ public class SodaChangerButtonBehaviour : MonoBehaviour, IPointerDownHandler, IP
                     .SetEase(accelerationEase);
                 txt.fontStyle = FontStyle.Normal;
                 txt.fontSize = 52;
+                button.interactable = false;
                 break;
             case ButtonStates.notPressed:
                 speedTween?.Kill();
@@ -102,6 +103,7 @@ public class SodaChangerButtonBehaviour : MonoBehaviour, IPointerDownHandler, IP
                     .SetEase(Ease.InOutSine);
                 txt.fontStyle = FontStyle.Bold;
                 txt.fontSize = 70;
+                button.interactable = true;
                 break;
         }
     }

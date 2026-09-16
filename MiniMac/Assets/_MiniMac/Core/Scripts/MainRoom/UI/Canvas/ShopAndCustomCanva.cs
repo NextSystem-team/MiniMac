@@ -30,10 +30,8 @@ public class ShopAndCustomCanva : MonoBehaviour
 
         customPanel.DOAnchorPosX(endPosition, easeTime).SetEase(Ease.OutSine);
 
-        shopButton.interactable = true;
-        shopChanger.SwitchState(ButtonStates.pressed);
-        customButton.interactable = false;
-        customChanger.SwitchState(ButtonStates.notPressed);
+        shopChanger.SwitchState(ButtonStates.notPressed);
+        customChanger.SwitchState(ButtonStates.pressed);
     }
 
     public void CloseCustomPanel()
@@ -41,18 +39,14 @@ public class ShopAndCustomCanva : MonoBehaviour
         customPanel.DOAnchorPosX(startPosition, easeTime).SetEase(Ease.InSine)
             .OnComplete(() => { customPanel.gameObject.SetActive(false); });
 
-        shopButton.interactable = false;
-        shopChanger.SwitchState(ButtonStates.notPressed);
-        customButton.interactable = true;
-        customChanger.SwitchState(ButtonStates.pressed);
+        shopChanger.SwitchState(ButtonStates.pressed);
+        customChanger.SwitchState(ButtonStates.notPressed);
     }
 
     private IEnumerator StartWithShopOpen()
     {
         yield return new WaitForEndOfFrame();
-        shopButton.interactable = true;
         shopChanger.SwitchState(ButtonStates.pressed);
-        customButton.interactable = false;
         customChanger.SwitchState(ButtonStates.notPressed);
     }
 }
