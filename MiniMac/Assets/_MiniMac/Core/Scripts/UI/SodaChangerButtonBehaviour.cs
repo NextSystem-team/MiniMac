@@ -7,7 +7,13 @@ using UnityEngine.EventSystems;
 using Image = UnityEngine.UI.Image;
 using System.Collections;
 
-public class SodaButtonBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public enum ButtonStates
+{
+    pressed,
+    notPressed
+}
+
+public class SodaChangerButtonBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     private Image buttonImage;
     private Material currentMaterial;
@@ -38,10 +44,12 @@ public class SodaButtonBehaviour : MonoBehaviour, IPointerDownHandler, IPointerU
 
     private readonly string offsetReference = "_BubbleOffset";
 
+    private Button button;
+
     void Start()
     {
+        button = GetComponent<Button>();
         rect = GetComponent<RectTransform>();
-
         buttonImage = GetComponent<Image>();
 
         if (buttonImage != null && buttonImage.material != null)
@@ -57,6 +65,9 @@ public class SodaButtonBehaviour : MonoBehaviour, IPointerDownHandler, IPointerU
 
         defaultScale = rect.localScale;
         pressedScale = defaultScale * 0.95f;
+
+        buttonImage.materialForRendering?.SetFloat("_BubbleSize", 0.196f);
+        buttonImage.materialForRendering?.SetFloat("_BubbleDensity", 32f);
     }
 
     void Update()
@@ -67,40 +78,47 @@ public class SodaButtonBehaviour : MonoBehaviour, IPointerDownHandler, IPointerU
         buttonImage.materialForRendering?.SetFloat(offsetReference, currentOffset);
     }
 
+    public void SwitchState(ButtonStates state)
+    {
+        switch (state)
+        {
+            case ButtonStates.notPressed:
+                speedTween?.Kill();
+                colorTween?.Kill();
+                speedTween = DOTween.To(() => currentSpeed, x => currentSpeed = x, acceleratedSpeed, accelerationTime)
+                    .SetEase(accelerationEase);
+                colorTween = buttonImage.DOColor(pressedColor, easeTime)
+                    .SetEase(accelerationEase);
+                break;
+            case ButtonStates.pressed:
+                speedTween?.Kill();
+                colorTween?.Kill();
+                speedTween = DOTween.To(() => currentSpeed, x => currentSpeed = x, defaultSpeed, accelerationTime)
+                    .SetEase(Ease.InOutSine);
+                colorTween = buttonImage.DOColor(defaultColor, easeTime)
+                    .SetEase(Ease.InOutSine);
+                break;
+        }
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (!button.interactable) return;
         AudioManager.Instance.PlaySFX(SFXType.UI_Button_Click);
 
-        speedTween?.Kill();
         sizeTween?.Kill();
-        colorTween?.Kill();
-
-        speedTween = DOTween.To(() => currentSpeed, x => currentSpeed = x, acceleratedSpeed, accelerationTime)
-            .SetEase(accelerationEase);
 
         sizeTween = rect.DOScale(pressedScale, easeTime)
-            .SetEase(accelerationEase);
-
-        if (buttonImage == null) return;
-        colorTween = buttonImage.DOColor(pressedColor, easeTime)
             .SetEase(accelerationEase);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        speedTween?.Kill();
+        if (!button.interactable) return;
         sizeTween?.Kill();
-        colorTween?.Kill();
-
-        speedTween = DOTween.To(() => currentSpeed, x => currentSpeed = x, defaultSpeed, accelerationTime)
-            .SetEase(Ease.InOutSine);
 
         sizeTween = rect.DOScale(defaultScale, easeTime)
             .SetEase(Ease.OutBack);
-
-        if (buttonImage == null) return;
-        colorTween = buttonImage.DOColor(defaultColor, easeTime)
-            .SetEase(Ease.InOutSine);
     }
 
     private IEnumerator FixAspectRatio()

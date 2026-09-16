@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,11 @@ public class MainRoomCanva : MonoBehaviour
 {
     [SerializeField] private GameObject rankCanva;
     [SerializeField] private GameObject shopCanva;
+    [SerializeField] private RectTransform shopContainer;
+
+    [SerializeField] private float easeTime = 0.3f;
+    private float startHeight = 2500f;
+    private float finalHeight = 0f;
 
     [SerializeField] private TextMeshProUGUI reportTextUI;
     [SerializeField] private TextMeshProUGUI buttonMoneyDisplay;
@@ -40,15 +46,23 @@ public class MainRoomCanva : MonoBehaviour
     public void OpenShopCanva()
     {
         shopCanva.SetActive(true);
+
+        shopContainer.anchoredPosition = new(shopContainer.anchoredPosition.x, startHeight);
+
+        shopContainer.DOAnchorPosY(finalHeight, easeTime).SetEase(Ease.OutBounce);
     }
 
     public void CloseShopCanva()
     {
-        shopCanva.SetActive(false);
+        shopContainer.anchoredPosition = new(shopContainer.anchoredPosition.x, finalHeight);
+
+        shopContainer.DOAnchorPosY(startHeight, easeTime).SetEase(Ease.InBack, 0.8f)
+            .OnComplete(() => { shopCanva.SetActive(false); });
     }
 
     public void ChangeToMinigameScene()
     {
+        DOTween.KillAll();
         SceneManager.LoadScene("MiniGameScene");
     }   
 

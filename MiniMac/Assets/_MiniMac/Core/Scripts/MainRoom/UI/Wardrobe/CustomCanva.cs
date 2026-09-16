@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,12 +6,18 @@ public class CustomCanva : MonoBehaviour
 {
     [SerializeField] private Image hatImage;
     [SerializeField] private SpriteRenderer hatRenderer;
-    [SerializeField] private GameObject wardrobePanel;
+    [SerializeField] private Image wardrobePanel;
+    [SerializeField] private RectTransform itemListPanel;
+
+    private float openedItemListHeight = 240f;
+    private float closedItemListHeight = -274f;
 
     [SerializeField] private GameObject wardrobeItemPrefab;
     [SerializeField] private Transform wardrobeItemParent;
 
     [SerializeField] private ShopItemListSO shopItemListSO;
+
+    private RectTransform rect;
 
     private void Start()
     {
@@ -71,11 +78,16 @@ public class CustomCanva : MonoBehaviour
     public void ShowWardrobePanel()
     {
         PopulateWardrobe();
-        wardrobePanel.SetActive(true);
+
+        wardrobePanel.raycastTarget = true;
+        wardrobePanel.DOFade(0.8f, 0.8f);
+        itemListPanel.DOAnchorPosY(openedItemListHeight, 0.3f).SetEase(Ease.InBack);
     }
 
     public void CloseWardrobePanel()
     {
-        wardrobePanel.SetActive(false);
+        wardrobePanel.raycastTarget = false;
+        wardrobePanel.DOFade(0f, 0.8f);
+        itemListPanel.DOAnchorPosY(closedItemListHeight, 0.5f).SetEase(Ease.InBack);
     }
 }

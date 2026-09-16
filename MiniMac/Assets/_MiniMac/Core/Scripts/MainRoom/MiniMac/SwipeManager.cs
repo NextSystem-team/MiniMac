@@ -48,21 +48,24 @@ public class SwipeManager : MonoBehaviour
             {
                 if (hit.collider.CompareTag("MiniMac"))
                 {
-                    float distanceMoved = Vector3.Distance(Input.mousePosition, lastTouchPosition);
-
-                    currentDistance += distanceMoved;
-
-                    if (Time.time >= timeToNextSound)
+                    if (petController.CurrentState == PetState.Idle)
                     {
-                        AudioManager.Instance.PlaySFX(SFXType.Pet_Caress);
+                        float distanceMoved = Vector3.Distance(Input.mousePosition, lastTouchPosition);
 
-                        timeToNextSound = Time.time + soundCooldown;
-                    }
+                        currentDistance += distanceMoved;
 
-                    if (currentDistance >= minDistanceToPat)
-                    {
-                        petController.ReactToPat();
-                        currentDistance = 0f;
+                        if (Time.time >= timeToNextSound)
+                        {
+                            AudioManager.Instance.PlaySFX(SFXType.Pet_Caress);
+
+                            timeToNextSound = Time.time + soundCooldown;
+                        }
+
+                        if (currentDistance >= minDistanceToPat)
+                        {
+                            petController.ReactToPat();
+                            currentDistance = 0f;
+                        }
                     }
                 }
             }

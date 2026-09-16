@@ -229,12 +229,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a499b6836d69718f99837e09895d9ff, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SodaButtonBehaviour
-  defaultSpeed: 0.05
-  acceleratedSpeed: 0.8
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
+  defaultSpeed: 0.3
+  acceleratedSpeed: 1.6
   pressedColor:
     serializedVersion: 2
     rgba: 4278190335
-  accelerationTime: 0.2
-  easeTime: 0.2
-  accelerationEase: 6
+  accelerationTime: 0.7
+  accelerationEase: 2
