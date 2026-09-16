@@ -44,6 +44,7 @@ public class SodaChangerButtonBehaviour : MonoBehaviour, IPointerDownHandler, IP
 
     private readonly string offsetReference = "_BubbleOffset";
 
+    [SerializeField] private Text txt;
     private Button button;
 
     void Start()
@@ -82,21 +83,25 @@ public class SodaChangerButtonBehaviour : MonoBehaviour, IPointerDownHandler, IP
     {
         switch (state)
         {
-            case ButtonStates.notPressed:
+            case ButtonStates.pressed:
                 speedTween?.Kill();
                 colorTween?.Kill();
                 speedTween = DOTween.To(() => currentSpeed, x => currentSpeed = x, acceleratedSpeed, accelerationTime)
                     .SetEase(accelerationEase);
                 colorTween = buttonImage.DOColor(pressedColor, easeTime)
                     .SetEase(accelerationEase);
+                txt.fontStyle = FontStyle.Normal;
+                txt.fontSize = 52;
                 break;
-            case ButtonStates.pressed:
+            case ButtonStates.notPressed:
                 speedTween?.Kill();
                 colorTween?.Kill();
                 speedTween = DOTween.To(() => currentSpeed, x => currentSpeed = x, defaultSpeed, accelerationTime)
                     .SetEase(Ease.InOutSine);
                 colorTween = buttonImage.DOColor(defaultColor, easeTime)
                     .SetEase(Ease.InOutSine);
+                txt.fontStyle = FontStyle.Bold;
+                txt.fontSize = 70;
                 break;
         }
     }

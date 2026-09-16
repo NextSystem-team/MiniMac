@@ -50,9 +50,9 @@ public class ShopAndCustomCanva : MonoBehaviour
     private IEnumerator StartWithShopOpen()
     {
         yield return new WaitForEndOfFrame();
-        shopButton.interactable = false;
-        shopChanger.SwitchState(ButtonStates.notPressed);
-        customButton.interactable = true;
-        customChanger.SwitchState(ButtonStates.pressed);
+        shopButton.interactable = true;
+        shopChanger.SwitchState(ButtonStates.pressed);
+        customButton.interactable = false;
+        customChanger.SwitchState(ButtonStates.notPressed);
     }
 }
