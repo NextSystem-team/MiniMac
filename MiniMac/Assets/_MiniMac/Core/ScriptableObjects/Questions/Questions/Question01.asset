@@ -17,12 +17,16 @@ MonoBehaviour:
   - answerText: Muito apimentado!
     petResponse: "Caramba! Deve ter sido bem estressante n\xE9?"
     petPose: {fileID: 21300000, guid: 08c2241b0f682918faf22316aec53960, type: 3}
+    petAnimation: {fileID: 7400000, guid: 0f14ce6ac6b8cd0ceb48783bf556a28f, type: 2}
   - answerText: Agridoce.
     petResponse: "Melhor que um dia ruim, n\xE3o \xE9?"
     petPose: {fileID: 21300000, guid: 5f5d953dfd68d6f47955a9bec96aed09, type: 3}
+    petAnimation: {fileID: 7400000, guid: 216dfe45abd49a8e0a6eedf0b9b2a80f, type: 2}
   - answerText: Nenhum...
     petResponse: "Poxa, espero que amanh\xE3 seja um dia mais tranquilo para voc\xEA..."
     petPose: {fileID: 21300000, guid: f0f353d880b0d4eabb3c447994d7bc2f, type: 3}
+    petAnimation: {fileID: 7400000, guid: 5b477cd46643c7cd688582cca6f981eb, type: 2}
   - answerText: Delicioso!
     petResponse: "Que incr\xEDvel! Fico feliz que o dia foi bem! "
     petPose: {fileID: 21300000, guid: 4965516a0a1e5a3bca9ec13496994ffd, type: 3}
+    petAnimation: {fileID: 7400000, guid: a057b1a8c9de638a69906c4b548c6390, type: 2}

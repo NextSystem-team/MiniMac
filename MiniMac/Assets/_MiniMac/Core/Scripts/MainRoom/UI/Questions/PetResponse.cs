@@ -1,14 +1,45 @@
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening; // Importando o DOTween
 
 public class PetReaction : MonoBehaviour
 {
     [SerializeField] private Text petResponseText;
-    [SerializeField] private Image petSprite;
+    [SerializeField] private Animator petReaction;
 
-    public void SetPetResponse(string response, Sprite pose)
+    [SerializeField] private float textReavelTime = 2f;
+
+    private string responseText;
+    private string reaction;
+
+    private string fullResponseText = "";
+    private Tween textRevealTween;
+
+    public void SetPetResponse(string response, AnimationClip animation)
     {
-        petResponseText.text = response;
-        petSprite.sprite = pose;
+        reaction = animation.name;
+        fullResponseText = response;
+        petResponseText.text = "";
+    }
+
+    private void OnEnable()
+    {
+        if (string.IsNullOrEmpty(fullResponseText)) return;
+
+        textRevealTween?.Kill();
+
+        petResponseText.text = "";
+
+        textRevealTween = petResponseText.DOText(fullResponseText, textReavelTime).SetEase(Ease.Linear);
+
+        if (!string.IsNullOrEmpty(reaction))
+        {
+            petReaction.Play(reaction);
+        }
+    }
+
+    private void OnDisable()
+    {
+        textRevealTween?.Kill();
     }
 }

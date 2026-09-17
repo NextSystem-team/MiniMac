@@ -1,4 +1,5 @@
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 public class QuestionCanvas : MonoBehaviour
@@ -10,15 +11,25 @@ public class QuestionCanvas : MonoBehaviour
 
     [SerializeField] private StreakCanva streakCanva;
 
+    void OnEnable()
+    {
+        GetComponent<CanvasGroup>().DOFade(1f, 0.8f);
+    }
+
+    void OnDisable()
+    {
+        GetComponent<CanvasGroup>().alpha = 0;
+    }
+
     public void ShowQuestionBody()
     {
         questionBody.gameObject.SetActive(true);
         petResponseBody.gameObject.SetActive(false);
     }
 
-    public void ShowPetResponseBody(string petResponse, Sprite petPose)
+    public void ShowPetResponseBody(string petResponse, AnimationClip petAnimation)
     {
-        petResponseBody.SetPetResponse(petResponse, petPose);
+        petResponseBody.SetPetResponse(petResponse, petAnimation);
 
         questionBody.gameObject.SetActive(false);
         petResponseBody.gameObject.SetActive(true);

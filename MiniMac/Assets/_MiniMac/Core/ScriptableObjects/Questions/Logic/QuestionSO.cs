@@ -10,6 +10,7 @@ public class AnswerOption
     public string petResponse;
 
     public Sprite petPose;
+    public AnimationClip petAnimation;
 }
 
 [CreateAssetMenu(fileName = "Question", menuName = "Scriptable Objects/Question")]
