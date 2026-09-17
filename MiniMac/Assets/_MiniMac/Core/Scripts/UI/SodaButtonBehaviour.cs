@@ -1,10 +1,8 @@
 using System;
 using DG.Tweening;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using Image = UnityEngine.UI.Image;
 using System.Collections;
 
 public class SodaButtonBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
