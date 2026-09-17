@@ -11,6 +11,8 @@ public class StageManager : MonoBehaviour
     public int dotsConnected;
     private float timePassed;
 
+    private bool hasGetTheCoins;
+
     private void Update()
     {
         if (dotsConnected >= 2)
@@ -22,14 +24,21 @@ public class StageManager : MonoBehaviour
                 GameManager.Instance.money += 50;
                 GameManager.Instance.playerScore += 50;
                 GameManager.Instance.hasPlayedMiniGame = true;
+                GameManager.Instance.IncrementPetQuestionChance(40);
             }
             else
             {
-                GameManager.Instance.playerScore += 5;
-                GameManager.Instance.money += 10;
+                if (!hasGetTheCoins)
+                {
+                    GameManager.Instance.playerScore += 5;
+                    GameManager.Instance.money += 10;
+
+                    hasGetTheCoins = true;
+                    GameManager.Instance.IncrementPetQuestionChance(40);
+                }
             }
+
             
-            GameManager.Instance.IncrementPetQuestionChance(40);
 
             mainCanva.OpenCongratsPanel();
         }

@@ -24,11 +24,6 @@ public class ButtonQuestion : MonoBehaviour
         StartCoroutine(EnableEffect());
     }
 
-    void OnDisable()
-    {
-        rect.DOKill();
-    }
-
     private void IniciarFlutuacao()
     {
         rect.DOAnchorPosY(posicaoOriginalY + distanciaFlutuacao, tempoFlutuacao)
