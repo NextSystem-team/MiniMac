@@ -29,12 +29,12 @@ public class GridManager : MonoBehaviour
                 gridData[x, y] = new CellData(currentTilePosition);
                 //Cria uma c�lula na posi��o atual do grid
 
-                if (x == 0 && y == 0)
+                if (x == 0 && y == columns-1)
                 {
                     GameObject dotOut = Instantiate(dotOutPrefab);
                     dotOut.transform.parent = transform;
                     dotOut.transform.position = Grid.GetCellCenterWorld(new Vector3Int(x, y, 0));
-                }else if (x == rows-1 && y == columns-1)
+                }else if (x == 2 && y == 0)
                 {
                     GameObject dotIn = Instantiate(dotInPrefab);
                     dotIn.transform.parent = transform;
@@ -42,7 +42,7 @@ public class GridManager : MonoBehaviour
                     dotIn.GetComponent<_CellObject>().cell = gridData[x, y];
                     gridData[x, y].containedObject = dotIn.GetComponent<_CellObject>();
                 }
-                else if (x == rows - 1 && y == columns - 4)
+                else if (x == rows-1 && y == columns-1)
                 {
                     GameObject dotIn = Instantiate(dotInPrefab);
                     dotIn.transform.parent = transform;
@@ -51,28 +51,19 @@ public class GridManager : MonoBehaviour
                     dotIn.GetComponent<_CellObject>().cell = gridData[x, y];
                     gridData[x, y].containedObject = dotIn.GetComponent<_CellObject>();
                 } 
-                else if (x == 3 && y == 0)
+                else if (x == 0 && y == 0)
                 {
                     GameObject dotOut = Instantiate(dotOutPrefab);
                     dotOut.transform.parent = transform;
                     dotOut.transform.position = Grid.GetCellCenterWorld(new Vector3Int(x, y, 0));
                     dotOut.GetComponent<Dot>().SetColor(Color.blue);
                 } 
-                else if (x == 2 && y == 4)
+                else if (x == rows/2 && y == columns/2)
                 {
                     GameObject bridge = Instantiate(bridgePrefab);
                     bridge.transform.parent = transform;
                     bridge.transform.position = Grid.GetCellCenterWorld(new Vector3Int(x, y, 0));
                     bridge.GetComponent<_CellObject>().cell = gridData[x, y];
-                    gridData[x, y].containedObject = bridge.GetComponent<_CellObject>();
-                }
-                else if (x == 5 && y == 4)
-                {
-                    GameObject bridge = Instantiate(bridgePrefab);
-                    bridge.transform.parent = transform;
-                    bridge.transform.position = Grid.GetCellCenterWorld(new Vector3Int(x, y, 0));
-                    bridge.GetComponent<_CellObject>().cell = gridData[x, y];
-                    bridge.GetComponent<BridgeObject>().direction = BridgeObject.Direction.Vertical;
                     gridData[x, y].containedObject = bridge.GetComponent<_CellObject>();
                 }
             }

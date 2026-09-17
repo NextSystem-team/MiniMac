@@ -76,14 +76,14 @@ public class SodaButtonBehaviour : MonoBehaviour, IPointerDownHandler, IPointerU
         colorTween?.Kill();
 
         speedTween = DOTween.To(() => currentSpeed, x => currentSpeed = x, acceleratedSpeed, accelerationTime)
-            .SetEase(accelerationEase);
+            .SetEase(accelerationEase).SetUpdate(true);
 
         sizeTween = rect.DOScale(pressedScale, easeTime)
-            .SetEase(accelerationEase);
+            .SetEase(accelerationEase).SetUpdate(true);
 
         if (buttonImage == null) return;
         colorTween = buttonImage.DOColor(pressedColor, easeTime)
-            .SetEase(accelerationEase);
+            .SetEase(accelerationEase).SetUpdate(true);
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -93,14 +93,14 @@ public class SodaButtonBehaviour : MonoBehaviour, IPointerDownHandler, IPointerU
         colorTween?.Kill();
 
         speedTween = DOTween.To(() => currentSpeed, x => currentSpeed = x, defaultSpeed, accelerationTime)
-            .SetEase(Ease.InOutSine);
+            .SetEase(Ease.InOutSine).SetUpdate(true);
 
         sizeTween = rect.DOScale(defaultScale, easeTime)
-            .SetEase(Ease.OutBack);
+            .SetEase(Ease.OutBack).SetUpdate(true);
 
         if (buttonImage == null) return;
         colorTween = buttonImage.DOColor(defaultColor, easeTime)
-            .SetEase(Ease.InOutSine);
+            .SetEase(Ease.InOutSine).SetUpdate(true);
     }
 
     private IEnumerator FixAspectRatio()

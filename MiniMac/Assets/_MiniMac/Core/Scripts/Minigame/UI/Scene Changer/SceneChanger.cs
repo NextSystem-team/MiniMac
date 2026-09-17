@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +10,7 @@ public class SceneChanger : MonoBehaviour
     public void ChangeScene()
     {
         Time.timeScale = 1;
+        DOTween.KillAll();
         SceneManager.LoadScene(sceneName);
     }
 }

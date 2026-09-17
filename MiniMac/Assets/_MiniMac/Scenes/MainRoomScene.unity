@@ -2169,8 +2169,8 @@ RectTransform:
   m_Children:
   - {fileID: 16621097}
   - {fileID: 1131707581}
-  - {fileID: 1487730395}
   - {fileID: 945096024}
+  - {fileID: 1487730395}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4866,7 +4866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbebb036292ac5e31b9cd6efe37978a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwipeManager
-  minDistanceToPat: 12000
+  minDistanceToPat: 10000
   soundCooldown: 0.4
   petController: {fileID: 660603543}
 --- !u!1 &713572231
