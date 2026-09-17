@@ -7,7 +7,9 @@ public enum PetState
     Idle,
     Happy,
     Curious,
-    Listening
+    Listening,
+    Angry,
+    Sad
 }
 
 public class PetController : MonoBehaviour
@@ -16,7 +18,7 @@ public class PetController : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private PoseListSO poseListSO;
-    private SpriteRenderer spriteRenderer;
+    private Animator petAnimator;
     [SerializeField] private SpriteRenderer hatRenderer;
     private PetQuestionManager petQuestionManager;
     [SerializeField] private GameObject petGameObject;
@@ -26,7 +28,7 @@ public class PetController : MonoBehaviour
 
     void Awake()
     {
-        spriteRenderer = petGameObject.GetComponent<SpriteRenderer>();
+        petAnimator = petGameObject.GetComponent<Animator>();
         petQuestionManager = GetComponent<PetQuestionManager>();
 
         hatRenderer.sprite = GameManager.Instance.currentHat != null ? GameManager.Instance.currentHat.itemRendererSprite : null;
@@ -44,18 +46,30 @@ public class PetController : MonoBehaviour
         switch (newState)
         {
             case PetState.Idle:
-                spriteRenderer.sprite = poseListSO.GetPoseByName(PetPoses.Neutral);
+                // 3. TOCAMOS a animação pelo nome exato dela usando petAnimator.Play()
+                petAnimator.Play(poseListSO.GetPoseByName(PetPoses.Neutral).poseName); 
                 break;
+                
             case PetState.Happy:
                 print("Pet is happy!");
+                petAnimator.Play(poseListSO.GetPoseByName(PetPoses.Happy).poseName);
+                break;
+            case PetState.Angry:
+                print("Pet is angry!");
+                petAnimator.Play(poseListSO.GetPoseByName(PetPoses.Angry).poseName);
+                break;
+            case PetState.Sad:
+                print("Pet is sad!");
+                petAnimator.Play(poseListSO.GetPoseByName(PetPoses.Sad).poseName);
                 break;
             case PetState.Curious:
                 print("Pet is curious!");
-                spriteRenderer.sprite = poseListSO.GetPoseByName(PetPoses.Happy);
+                petAnimator.Play(poseListSO.GetPoseByName(PetPoses.Curious).poseName);
                 questionButton.gameObject.SetActive(true);
                 break;
+                
             case PetState.Listening:
-                spriteRenderer.sprite = poseListSO.GetPoseByName(PetPoses.Neutral);
+                petAnimator.Play(poseListSO.GetPoseByName(PetPoses.Neutral).poseName);
                 print("Pet is listening!");
                 questionButton.gameObject.SetActive(false);
                 break;
@@ -67,7 +81,6 @@ public class PetController : MonoBehaviour
         if (CurrentState == PetState.Idle)
         {
             ChangeState(PetState.Happy);
-            spriteRenderer.sprite = poseListSO.GetPoseByName(PetPoses.Happy);
 
             if (!GameManager.Instance.hasPattedPet)
             {
@@ -82,7 +95,7 @@ public class PetController : MonoBehaviour
                 GameManager.Instance.playerScore += 1;
             }
 
-            StartCoroutine(ResetToIdleAfterDelay(2f));
+            StartCoroutine(ResetToIdleAfterDelay(0.8f));
         }
     }
 

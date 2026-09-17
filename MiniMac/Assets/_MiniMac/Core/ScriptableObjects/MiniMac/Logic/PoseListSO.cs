@@ -13,32 +13,34 @@ public class PoseListSO : ScriptableObject
 {
     public List<PetPoseSO> poses;
 
-    private Dictionary<string, Sprite> poseDictionary;
+    private Dictionary<string, PetPoseSO> poseDictionary;
 
     public void InitializePoseDictionary()
     {
-        poseDictionary = new Dictionary<string, Sprite>();
+        poseDictionary = new Dictionary<string, PetPoseSO>();
         foreach (var pose in poses)
         {
-            poseDictionary.Add(pose.poseName, pose.poseSprite);
+            poseDictionary.Add(pose.poseName, pose);
         }
     }
 
-    public Sprite GetPoseByName(string poseName)
+    public PetPoseSO GetPoseByName(string poseName)
     {
         if (poseDictionary == null)
         {
             InitializePoseDictionary();
         }
 
-        if (poseDictionary.TryGetValue(poseName, out Sprite poseSprite))
+        if (poseDictionary.TryGetValue(poseName, out PetPoseSO poseData))
         {
-            return poseSprite;
+            return poseData;
         }
         else
         {
             Debug.LogWarning($"Pose '{poseName}' não encontrada na Lista de Poses, entregando pose base.");
-            return poseDictionary[PetPoses.Neutral];
+            
+            // Retorna o objeto base completo
+            return poseDictionary[PetPoses.Neutral]; 
         }
     }
 }

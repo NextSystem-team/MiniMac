@@ -3741,8 +3741,8 @@ GameObject:
   m_Component:
   - component: {fileID: 553511986}
   - component: {fileID: 553511985}
-  - component: {fileID: 553511987}
   - component: {fileID: 553511988}
+  - component: {fileID: 553511989}
   m_Layer: 0
   m_Name: Pet
   m_TagString: MiniMac
@@ -3826,90 +3826,6 @@ Transform:
   - {fileID: 2045193082}
   m_Father: {fileID: 660603542}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &553511987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553511983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.ShadowCaster2D
-  m_ShadowGroup: 0
-  m_Priority: 0
-  m_ComponentVersion: 6
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_AlphaCutoff: 0.1
-  m_ApplyToSortingLayers: 00000000
-  m_ShapePath:
-  - {x: -0.085625, y: -0.08562502, z: 0}
-  - {x: -0.085625, y: 0.08562501, z: 0}
-  - {x: 0.085625, y: 0.08562501, z: 0}
-  - {x: 0.085625, y: -0.08562502, z: 0}
-  m_ShapePathHash: 0
-  m_InstanceId: 0
-  m_ShadowShape2DComponent: {fileID: 553511985}
-  m_ShadowShape2DProvider:
-    rid: 9045764203278237770
-  m_ShadowCastingSource: 2
-  m_ShadowMesh:
-    rid: 9045764203278237771
-  m_CastingOption: 1
-  m_PreviousTrimEdge: 0.1
-  m_PreviousEdgeProcessing: 1
-  m_PreviousShadowCastingSource: 2
-  m_PreviousShadowShape2DSource: {fileID: 553511985}
-  m_SelectionSources:
-    rid: 9045764203278237772
-  references:
-    version: 2
-    RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
-    - rid: 9045764203278237770
-      type: {class: ShadowShape2DProvider_SpriteRenderer, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data: 
-    - rid: 9045764203278237771
-      type: {class: ShadowMesh2D, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data:
-        m_Vertices: []
-        m_Indices: 
-        m_LocalBounds:
-          m_Center: {x: 0, y: 0, z: 0}
-          m_Extent: {x: 0, y: 0, z: 0}
-        m_EdgeProcessing: 1
-        m_TrimEdge: 0.1
-        m_FlipX: 0
-        m_FlipY: 0
-        m_InitialTrim: 0.1
-    - rid: 9045764203278237772
-      type: {class: Shadow2DProviderSources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data:
-        m_SelectedHashCode: 0
-        m_SelectedSource:
-          rid: -2
-        m_Provider2DCache:
-          rid: 9045764203278237773
-    - rid: 9045764203278237773
-      type: {class: 'Provider2DCache`1[[UnityEngine.Rendering.Universal.ShadowShape2DProvider, Unity.RenderPipelines.Universal.2D.Runtime]]', ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data:
-        m_Cache:
-        - m_Key:
-            m_TypeName: ShadowShape2DProvider_SpriteRenderer
-            m_Component: {fileID: 553511985}
-            m_UsesComponent: 1
-          m_Value:
-            m_Provider:
-              rid: 9045764203278237774
-    - rid: 9045764203278237774
-      type: {class: ShadowShape2DProvider_SpriteRenderer, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data: 
 --- !u!65 &553511988
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3931,6 +3847,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.105, y: 0.17125, z: 0.02}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &553511989
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553511983}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef7775ea49d8c6d8fbe941898eef7ba0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &561595142
 GameObject:
   m_ObjectHideFlags: 0
@@ -7991,7 +7929,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.123}
+  m_AnchoredPosition: {x: 0, y: 0.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1191281697
@@ -8014,7 +7952,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '!'
+  m_text: '?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8863,6 +8801,7 @@ GameObject:
   - component: {fileID: 1324706745}
   - component: {fileID: 1324706744}
   - component: {fileID: 1324706747}
+  - component: {fileID: 1324706748}
   m_Layer: 5
   m_Name: ButtonQuestion
   m_TagString: Untagged
@@ -8879,8 +8818,8 @@ RectTransform:
   m_GameObject: {fileID: 1324706742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1191281696}
   m_Father: {fileID: 1782573908}
@@ -9003,6 +8942,20 @@ MonoBehaviour:
     rgba: 4278190335
   accelerationTime: 0.7
   accelerationEase: 2
+--- !u!114 &1324706748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324706742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e67313d913679528d08c3e7e37da17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonQuestion
+  distanciaFlutuacao: 0.1
+  tempoFlutuacao: 0.7
 --- !u!1 &1360894616
 GameObject:
   m_ObjectHideFlags: 0

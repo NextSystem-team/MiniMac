@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: PoseListSO
   m_EditorClassIdentifier: Assembly-CSharp::PoseListSO
   poses:
-  - poseName: Neutral
+  - poseName: Idle
     poseSprite: {fileID: 21300000, guid: 5f5d953dfd68d6f47955a9bec96aed09, type: 3}
-  - poseName: Happy
+  - poseName: HappyIntro
     poseSprite: {fileID: 21300000, guid: 4965516a0a1e5a3bca9ec13496994ffd, type: 3}
-  - poseName: Angry
+  - poseName: AngryIntro
     poseSprite: {fileID: 21300000, guid: 08c2241b0f682918faf22316aec53960, type: 3}
-  - poseName: Sad
+  - poseName: SadIntro
     poseSprite: {fileID: 21300000, guid: f0f353d880b0d4eabb3c447994d7bc2f, type: 3}
+  - poseName: CuriousIdle
+    poseSprite: {fileID: 21300000, guid: 7fc71e50d92dd7466908f7331ad269da, type: 3}
