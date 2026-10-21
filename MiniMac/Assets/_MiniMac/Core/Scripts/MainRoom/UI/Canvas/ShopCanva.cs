@@ -11,6 +11,7 @@ public class ShopCanva : MonoBehaviour
     void Start()
     {
         PopulateShopItems();
+        ShowItemDescription(shopItemListSO.shopItems[0]);
     }
 
     public void PopulateShopItems()

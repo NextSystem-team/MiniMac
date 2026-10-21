@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,19 +7,19 @@ public class ShopItemDescription : MonoBehaviour
     [SerializeField] private GameObject infoContainerTop;
     [SerializeField] private GameObject infoContainerBottom;
 
-    [SerializeField] private Image itemIcon;
+    [SerializeField] private SpriteRenderer itemIcon;
     [SerializeField] private Text itemName;
     [SerializeField] private Text itemDescription;
-    [SerializeField] private Text itemPrice;
+    [SerializeField] private TextMeshPro itemPrice;
 
     public ShopItem currentShopItem;
 
     public void SetDescription(ShopItem shopItem)
     {
-        itemIcon.sprite = shopItem.itemIcon;
+        itemIcon.sprite = shopItem.itemRendererSprite;
         itemName.text = shopItem.itemName;
         itemDescription.text = shopItem.itemDescription;
-        itemPrice.text = shopItem.itemPrice.ToString();
+        itemPrice.text = shopItem.itemPrice.ToString() + "$";
 
         currentShopItem = shopItem;
 
@@ -35,6 +36,8 @@ public class ShopItemDescription : MonoBehaviour
             
             infoContainerBottom.SetActive(false);
             infoContainerTop.SetActive(false);
+            itemIcon.sprite = null;
+            itemPrice.text = "";
 
             transform.parent.GetComponent<ShopCanva>().PopulateShopItems();
             AudioManager.Instance.PlaySFX(SFXType.UI_Item_Buy);
