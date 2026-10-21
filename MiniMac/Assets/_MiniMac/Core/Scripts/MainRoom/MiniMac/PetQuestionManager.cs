@@ -52,5 +52,7 @@ public class PetQuestionManager : MonoBehaviour
         questionCanvas.gameObject.SetActive(true);
         questionCanvas.GetComponent<QuestionCanvas>().ShowQuestionBody();
         petController.ChangeState(PetState.Listening);
+
+        GameManager.Instance.petQuestionChance = 10;
     }
 }
